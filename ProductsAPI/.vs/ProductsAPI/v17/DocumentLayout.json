@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "D:\\Me\\products-crud\\ProductsAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\controllers\\userproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\controllers\\userproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A23BABDD-2DB0-4B74-A097-5281FD262B85}|DomainLayer\\DomainLayer.csproj|d:\\me\\products-crud\\productsapi\\domainlayer\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23BABDD-2DB0-4B74-A097-5281FD262B85}|DomainLayer\\DomainLayer.csproj|solutionrelative:domainlayer\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8494599D-E072-47AC-993B-170FF53A8ACB}|DataAccessLayer\\DataAccessLayer.csproj|d:\\me\\products-crud\\productsapi\\dataaccesslayer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8494599D-E072-47AC-993B-170FF53A8ACB}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8494599D-E072-47AC-993B-170FF53A8ACB}|DataAccessLayer\\DataAccessLayer.csproj|d:\\me\\products-crud\\productsapi\\dataaccesslayer\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8494599D-E072-47AC-993B-170FF53A8ACB}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A23BABDD-2DB0-4B74-A097-5281FD262B85}|DomainLayer\\DomainLayer.csproj|d:\\me\\products-crud\\productsapi\\domainlayer\\models\\userproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23BABDD-2DB0-4B74-A097-5281FD262B85}|DomainLayer\\DomainLayer.csproj|solutionrelative:domainlayer\\models\\userproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\appsettings.json",
               "RelativeDocumentMoniker": "ProductsAPI\\appsettings.json",
               "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\appsettings.json",
               "RelativeToolTip": "ProductsAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-29T17:32:03.535Z",
+              "WhenOpened": "2025-06-30T04:56:51.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ProductsAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ProductsAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAUwCQAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T04:54:33.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\DomainLayer\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Models\\Product.cs",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\DomainLayer\\Models\\Product.cs",
+              "RelativeToolTip": "DomainLayer\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T04:36:59.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserProductsController.cs",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\UserProductsController.cs",
+              "RelativeDocumentMoniker": "ProductsAPI\\Controllers\\UserProductsController.cs",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\UserProductsController.cs",
+              "RelativeToolTip": "ProductsAPI\\Controllers\\UserProductsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T04:27:53.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ProductsAPI\\Program.cs",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Program.cs",
+              "RelativeToolTip": "ProductsAPI\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAUwCgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T04:21:21.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserProduct.cs",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\DomainLayer\\Models\\UserProduct.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Models\\UserProduct.cs",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\DomainLayer\\Models\\UserProduct.cs",
+              "RelativeToolTip": "DomainLayer\\Models\\UserProduct.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAlwA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T04:18:48.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\DataAccessLayer\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DbInitializer.cs",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\DataAccessLayer\\DbInitializer.cs",
+              "RelativeToolTip": "DataAccessLayer\\DbInitializer.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAADsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T04:18:02.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\DataAccessLayer\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\DataAccessLayer\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DataAccessLayer\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T04:15:38.07Z",
               "EditorCaption": ""
             }
           ]
