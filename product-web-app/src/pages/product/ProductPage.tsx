@@ -50,10 +50,9 @@ const ProductPage: React.FC = () => {
                 toast.success("Producto creado");
             }
             loadProducts();
+            setSelectedProduct(null);
         } catch {
             toast.error("Error al guardar producto");
-        }
-        finally {
             setSelectedProduct(null);
         }
     };
@@ -83,13 +82,16 @@ const ProductPage: React.FC = () => {
     };
 
     return (
-        <div>
-            <h1 className="m-4">Productos</h1>
-
-            <div className="d-flex justify-content-end mb-3">
+        <div className="h-full">
+            <div className="m-4">
+                <div className="d-flex justify-content-between align-items-center">
+                    <h1 className="my-auto">Productos</h1>
+                <div>
                 <button className="btn btn-success" onClick={() => openModal()}>
                     Nuevo Producto
                 </button>
+                </div>
+                </div>
             </div>
             
             <ProductList

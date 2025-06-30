@@ -7,16 +7,25 @@ interface ProductListProps {
 }
 
 const ProductList: React.FC<ProductListProps> = ({ products, onEdit, onDelete }) => {
-    
+    const formatPrice = (price: number) => {
+        return new Intl.NumberFormat('es-CO', { 
+            style: 'currency', 
+            currency: 'COP',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+        }).format(price);
+    };
+
     return (
-        <div>
-            <table className="table table-striped">
+        <div className="table-responsive"> 
+            <table className="table table-striped table-hover table-bordered caption-top"> {/* Añadidas clases */}
+                <caption>Lista de Productos</caption> {/* Un título para la tabla */}
                 <thead>
-                    <tr>
+                    <tr className="table-dark"> {/* Encabezado oscuro */}
                         <th>Nombre</th>
                         <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Acciones</th>
+                        <th className="text-end">Precio</th> {/* Alineado a la derecha */}
+                        <th className="text-center">Acciones</th> {/* Centrado */}
                     </tr>
                 </thead>
                 <tbody>
@@ -24,8 +33,8 @@ const ProductList: React.FC<ProductListProps> = ({ products, onEdit, onDelete })
                         <tr key={p.id}>
                             <td>{p.name}</td>
                             <td>{p.description}</td>
-                            <td>${p.price}</td>
-                            <td>
+                            <td className="text-end">{formatPrice(p.price)}</td> {/* Aplicado el formato y alineado */}
+                            <td className="text-center"> {/* Centrado */}
                                 <button 
                                     className="btn btn-sm btn-primary me-2"
                                     onClick={() => onEdit(p)}
@@ -41,6 +50,13 @@ const ProductList: React.FC<ProductListProps> = ({ products, onEdit, onDelete })
                             </td>
                         </tr>
                     ))}
+                    {products.length === 0 && (
+                        <tr>
+                            <td colSpan={4} className="text-center text-muted py-3">
+                                No hay productos para mostrar.
+                            </td>
+                        </tr>
+                    )}
                 </tbody>
             </table>
         </div>

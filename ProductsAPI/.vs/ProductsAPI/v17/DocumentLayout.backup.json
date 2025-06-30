@@ -3,36 +3,8 @@
   "WorkspaceRootPath": "D:\\Me\\products-crud\\ProductsAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A23BABDD-2DB0-4B74-A097-5281FD262B85}|DomainLayer\\DomainLayer.csproj|d:\\me\\products-crud\\productsapi\\domainlayer\\models\\userproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23BABDD-2DB0-4B74-A097-5281FD262B85}|DomainLayer\\DomainLayer.csproj|solutionrelative:domainlayer\\models\\userproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\controllers\\userproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\controllers\\userproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\dtos\\createuserproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\dtos\\createuserproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8494599D-E072-47AC-993B-170FF53A8ACB}|DataAccessLayer\\DataAccessLayer.csproj|d:\\me\\products-crud\\productsapi\\dataaccesslayer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8494599D-E072-47AC-993B-170FF53A8ACB}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57559600-9E26-47E2-961F-B0F5A4D0236B}|ApplicationLayer\\ApplicationLayer.csproj|d:\\me\\products-crud\\productsapi\\applicationlayer\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57559600-9E26-47E2-961F-B0F5A4D0236B}|ApplicationLayer\\ApplicationLayer.csproj|solutionrelative:applicationlayer\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|solutionrelative:productsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Me\\products-crud\\ProductsAPI\\render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{784D45D4-C031-43D7-B459-69668CA2888B}|ProductsAPI\\ProductsAPI.csproj|d:\\me\\products-crud\\productsapi\\productsapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -46,124 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateUserProductDto.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\DTOs\\CreateUserProductDto.cs",
-              "RelativeDocumentMoniker": "ProductsAPI\\DTOs\\CreateUserProductDto.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\DTOs\\CreateUserProductDto.cs",
-              "RelativeToolTip": "ProductsAPI\\DTOs\\CreateUserProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T08:28:31.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserProduct.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\DomainLayer\\Models\\UserProduct.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\Models\\UserProduct.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\DomainLayer\\Models\\UserProduct.cs",
-              "RelativeToolTip": "DomainLayer\\Models\\UserProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T08:28:54.534Z",
+              "Title": "render.yaml",
+              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\render.yaml",
+              "RelativeDocumentMoniker": "render.yaml",
+              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\render.yaml",
+              "RelativeToolTip": "render.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-06-30T11:41:10.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserProductsController.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\UserProductsController.cs",
-              "RelativeDocumentMoniker": "ProductsAPI\\Controllers\\UserProductsController.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\UserProductsController.cs",
-              "RelativeToolTip": "ProductsAPI\\Controllers\\UserProductsController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAEwEEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T08:25:52.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ProductsAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ProductsAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAwwCEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T07:50:10.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ApplicationLayer\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "ApplicationLayer\\Services\\ProductService.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ApplicationLayer\\Services\\ProductService.cs",
-              "RelativeToolTip": "ApplicationLayer\\Services\\ProductService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAswBYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T06:34:47.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\DataAccessLayer\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\DbInitializer.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\DataAccessLayer\\DbInitializer.cs",
-              "RelativeToolTip": "DataAccessLayer\\DbInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAACWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T05:41:36.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "ProductsAPI\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "ProductsAPI\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAwwCIAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T06:34:22.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Program.cs",
-              "RelativeDocumentMoniker": "ProductsAPI\\Program.cs",
-              "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\Program.cs",
-              "RelativeToolTip": "ProductsAPI\\Program.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T05:43:24.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\appsettings.json",
               "RelativeDocumentMoniker": "ProductsAPI\\appsettings.json",
               "ToolTip": "D:\\Me\\products-crud\\ProductsAPI\\ProductsAPI\\appsettings.json",
               "RelativeToolTip": "ProductsAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-30T05:43:21.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T10:48:29.514Z"
             }
           ]
         }

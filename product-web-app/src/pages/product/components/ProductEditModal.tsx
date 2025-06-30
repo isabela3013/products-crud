@@ -20,7 +20,7 @@ const ProductEditModal: React.FC<ProductEditModalProps> = ({ show, product, onCl
         }
     }, [product]);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setForm({ ...form, [name]: name === "price" ? parseFloat(value) : value });
     };
@@ -44,36 +44,78 @@ const ProductEditModal: React.FC<ProductEditModalProps> = ({ show, product, onCl
     if (!show) return null;
 
     return (
-        <div className="modal show d-block" tabIndex={-1}>
-            <div className="modal-dialog">
+        <div className="modal fade show d-block" tabIndex={-1}>
+            <div className="modal-dialog modal-dialog-centered modal-md">
                 <div className="modal-content">
 
                     <div className="modal-header">
-                        <h5 className="modal-title">
+                        <h5 className="modal-title" id="productModalLabel">
                             {product ? "Editar Producto" : "Nuevo Producto"}
                         </h5>
                         <button onClick={handleClose} className="btn-close"></button>
                     </div>
 
                     <div className="modal-body">
-                        <input name="name" className="form-control mb-2" value={form.name} onChange={handleChange} placeholder="Nombre" />
-                        <input name="price" type="number" className="form-control mb-2" value={form.price} onChange={handleChange} placeholder="Precio" />
-                        <input name="description" className="form-control mb-2" value={form.description} onChange={handleChange} placeholder="Descripción" />
+                        <form>
+                            <div className="mb-3"> {/* Margen inferior para cada grupo de formulario */}
+                                <label htmlFor="productName" className="form-label">Nombre del Producto</label>
+                                <input
+                                    type="text" // Tipo de texto para el nombre
+                                    name="name"
+                                    id="productName" // ID para conectar con la etiqueta
+                                    className="form-control" // Eliminamos mb-2 de aquí ya que el div mb-3 lo maneja
+                                    value={form.name}
+                                    onChange={handleChange}
+                                    placeholder="Nombre del producto"
+                                    required // Campo requerido
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="productPrice" className="form-label">Precio</label>
+                                <input
+                                    type="number"
+                                    name="price"
+                                    id="productPrice"
+                                    className="form-control"
+                                    value={form.price}
+                                    onChange={handleChange}
+                                    placeholder="Precio del producto"
+                                    required
+                                    min="0" // Valor mínimo para el precio
+                                    step="0.01" // Permite valores decimales para el precio
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="productDescription" className="form-label">Descripción</label>
+                                <textarea // Usamos textarea para descripciones más largas
+                                    name="description"
+                                    id="productDescription"
+                                    className="form-control"
+                                    value={form.description}
+                                    onChange={handleChange}
+                                    placeholder="Descripción del producto"
+                                    rows={3}
+                                    required
+                                ></textarea>
+                            </div>
+                        </form>
                     </div>
 
                     <div className="modal-footer">
-                        <button 
+                        <button
+                            type="button" // Tipo button para evitar envío accidental del formulario
+                            onClick={handleClose} // Usa handleClose para consistencia
+                            className="btn btn-secondary"
+                            data-bs-dismiss="modal" // Cierra el modal con data-bs-dismiss
+                        >
+                            Cancelar
+                        </button>
+                        <button
+                            type="submit" // Tipo submit para el botón principal de acción
                             onClick={handleSubmit}
                             className="btn btn-success"
                         >
                             Guardar
-                        </button>
-
-                        <button 
-                            onClick={onClose}
-                            className="btn btn-secondary"
-                        >
-                            Cancelar
                         </button>
                     </div>
                 </div>
