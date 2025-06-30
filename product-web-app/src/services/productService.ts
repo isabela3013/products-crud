@@ -1,16 +1,18 @@
-import axios from "axios";
 import type { Product } from "../models/Product";
+import axiosInstance from "./axios";
 
-const API_URL = 'https://localhost:5001/api/products';
+// const API_URL = 'https://localhost:7179/api/product';
 
-export const getProducts = () => axios.get<Product[]>(API_URL);
+const endpoint = '/product';
 
-export const getProduct = (id: number) => axios.get<Product>(`${API_URL}/${id}`);
+export const getProducts = () => axiosInstance.get<Product[]>(endpoint);
 
-export const createProduct = (product: Omit<Product, 'id' | 'createdAt'>) =>
-    axios.post<Product>(API_URL, product);
+export const getProduct = (id: number) => axiosInstance.get<Product>(`${endpoint}/${id}`);
+
+export const createProduct = (product: Omit<Product, 'id'>) =>
+    axiosInstance.post<Product>(endpoint, product);
 
 export const updateProduct = (id: number, product: Omit<Product, 'id' | 'createdAt'>) =>
-    axios.put<Product>(`${API_URL}/${id}`, product);
+    axiosInstance.put<Product>(`${endpoint}/${id}`, product);
 
-export const deleteProduct = (id: number) => axios.delete(`${API_URL}/${id}`);
+export const deleteProduct = (id: number) => axiosInstance.delete(`${endpoint}/${id}`);

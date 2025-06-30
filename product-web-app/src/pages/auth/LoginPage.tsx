@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { authService } from "../../services/authService";
 import { loginSuccess } from "../../redux/slices/authSlice";
 import type { AppDispatch } from "../../redux/store";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -18,7 +19,7 @@ const Login = () => {
             dispatch(loginSuccess(response.data.token));
             navigate('/my-products');
         } catch (error) {
-            alert('Login failed');
+            toast.error("Ocurrió un error al iniciar sesíon. Intente nuevamente.");
         }
     };
 
@@ -40,7 +41,7 @@ const Login = () => {
                     onChange={e => setPassword(e.target.value)}
                 />
 
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Iniciar Sesión</button>
             </form>
         </div>
     );

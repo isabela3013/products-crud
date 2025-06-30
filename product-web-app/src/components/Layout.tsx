@@ -10,7 +10,7 @@ export const Layout = () => {
             {/* Contenido principal: Ocupa el espacio restante (flex-grow-1)
                 Usamos mt-5 (margin-top) para crear espacio debajo del menú fijo.
                 El container de Bootstrap centra el contenido y le da un padding. */}
-            <main className="flex-grow-1 container mt-5 mb-4"> {/* mt-5 para espacio debajo del navbar fijo */}
+            <main className="flex-grow-1 container mt-5 mb-4 h-vh"> {/* mt-5 para espacio debajo del navbar fijo */}
                 <Outlet />
             </main>
             

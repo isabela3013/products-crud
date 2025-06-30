@@ -20,6 +20,8 @@ namespace ApplicationLayer.Services
 
         public async Task<Product> CreateAsync(Product product)
         {
+            product.CreatedAt = DateTime.Now;
+
             // Validaciones extra si quieres (ej. nombre único)
             return await _repository.AddAsync(product);
         }

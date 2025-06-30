@@ -233,6 +233,69 @@
         }
       }
     },
+    "/api/UserProducts/{id}": {
+      "put": {
+        "tags": [
+          "UserProducts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserProductDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserProductDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserProductDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "UserProducts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -278,17 +341,14 @@
       "CreateUserProductDto": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
+          "productId": {
+            "type": "integer",
+            "format": "int32"
           },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "price": {
+          "purchasePrice": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "status": {
             "$ref": "#/components/schemas/ProductStatus"
@@ -342,12 +402,11 @@
       },
       "ProductStatus": {
         "enum": [
-          0,
-          1,
-          2
+          "Pendiente",
+          "Comprado",
+          "Utilizado"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "RegisterDto": {
         "type": "object",

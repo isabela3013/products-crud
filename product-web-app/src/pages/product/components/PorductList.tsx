@@ -1,39 +1,42 @@
-import { useState } from "react";
 import type { Product } from "../../../models/Product";
 
-const ProductList: React.FC = () => {
-    const [products, setProducts] = useState<Product[]>([]);
-    
-    const handleDelete = async (id: number) => {
-        // await deleteProduct(id);
-        // loadProducts();
-    };
+interface ProductListProps {
+    products: Product[];
+    onEdit: (product: Product) => void;
+    onDelete: (id: number) => void;
+}
 
+const ProductList: React.FC<ProductListProps> = ({ products, onEdit, onDelete }) => {
+    
     return (
         <div>
             <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th>Name</th><th>Price</th><th>Actions</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     {products.map(p => (
                         <tr key={p.id}>
                             <td>{p.name}</td>
+                            <td>{p.description}</td>
                             <td>${p.price}</td>
                             <td>
                                 <button 
                                     className="btn btn-sm btn-primary me-2"
-                                    // onClick={() => onEdit(p)}
+                                    onClick={() => onEdit(p)}
                                 >
-                                    Edit
+                                    Editar
                                 </button>
                                 <button 
                                     className="btn btn-sm btn-danger"
-                                    onClick={() => handleDelete(p.id)}
+                                    onClick={() => onDelete(p.id)}
                                 >
-                                    Delete
+                                    Eliminar
                                 </button>
                             </td>
                         </tr>

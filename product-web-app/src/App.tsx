@@ -5,6 +5,7 @@ import { Layout } from './components/Layout.tsx';
 import { Provider } from 'react-redux';
 import { store } from './redux/store.ts';
 import { requireAuth } from './guards/requireAuth.tsx';
+import { ToastContainer } from 'react-toastify';
 
 const ProductPage = lazy(() => import('./pages/product/ProductPage.tsx'));
 const LoginPage = lazy(() => import('./pages/auth/LoginPage.tsx'));
@@ -43,6 +44,16 @@ function App() {
             } />
           </Routes>
         </BrowserRouter>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </Provider>
     </Suspense>
   )

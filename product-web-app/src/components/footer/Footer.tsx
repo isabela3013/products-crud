@@ -67,7 +67,8 @@ export const Footer = () => {
                     <div> Iconos diseñados por <a href="https://www.flaticon.es/autores/bharat-icons" title="Bharat Icons"> Bharat Icons </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
                 </div>
             </div>
-             {/* Un estilo adicional para los links si deseas un hover effect */}
+            
+            {/* Un estilo adicional para los links si deseas un hover effect */}
             <style>{`
                 .hover-link {
                     color: #fff !important; /* Cambia a blanco en hover */
