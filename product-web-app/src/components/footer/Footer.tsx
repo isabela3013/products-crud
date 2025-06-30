@@ -12,30 +12,12 @@ export const Footer = () => {
                         <Link to="/" className="text-decoration-none text-info h4 fw-bold"> {/* text-info es un color de Bootstrap */}
                             Product Manager App
                         </Link>
-                        <p className="mt-2 small">
+                        <p className="small">
                             © {currentYear} Isabella Jaramillo
                         </p>
                         <p className="small">
                             Todos los derechos reservados.
                         </p>
-                    </div>
-
-                    {/* Sección de Enlaces Rápidos */}
-                    <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                        <h5 className="fw-bold mb-3">Enlaces Rápidos</h5>
-                        <ul className="list-unstyled"> {/* list-unstyled para quitar los puntos de la lista */}
-                            <li>
-                                <Link to="/" className="text-decoration-none text-muted hover-link">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/create" className="text-decoration-none text-muted hover-link">Create Product</Link>
-                            </li>
-                            <li>
-                                <Link to="/terms-of-service" className="text-decoration-none text-muted hover-link">
-                                    Términos de Servicio (Simulado)
-                                </Link>
-                            </li>
-                        </ul>
                     </div>
 
                     {/* Sección de Contacto */}

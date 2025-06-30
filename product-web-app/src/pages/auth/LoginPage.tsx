@@ -24,24 +24,46 @@ const Login = () => {
     };
 
     return (
-        <div className="container mt-4">
+        <div className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+            <form onSubmit={handleLogin} className="p-4 border rounded shadow-sm bg-white" style={{ maxWidth: '400px', width: '100%' }}>
+                <h2 className="mb-4 text-center">Iniciar Sesión</h2>
 
-            <h2>Login</h2>
+                <div className="mb-3">
+                    <label htmlFor="emailInput" className="form-label">Correo Electrónico</label>
+                    <input
+                        type="email"
+                        id="emailInput"
+                        className={`form-control`}
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        placeholder="ejemplo@dominio.com"
+                        required
+                    />
+                </div>
 
-            <form onSubmit={handleLogin}>
-                <input
-                    className="form-control mb-2"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                />
-                <input
-                    className="form-control mb-2"
-                    type="password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                />
+                <div className="mb-3">
+                    <label htmlFor="passwordInput" className="form-label">Contraseña</label>
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        className={`form-control`}
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        placeholder="Ingresa tu contraseña"
+                        required
+                    />
+                </div>
 
-                <button className="btn btn-primary">Iniciar Sesión</button>
+                <button
+                    type="submit"
+                    className="btn btn-primary w-100 mb-3"
+                >
+                    Iniciar Sesión
+                </button>
+
+                <p className="text-center text-muted">
+                    ¿No tienes una cuenta? <a href="/register" className="text-decoration-none">Regístrate aquí</a>
+                </p>
             </form>
         </div>
     );

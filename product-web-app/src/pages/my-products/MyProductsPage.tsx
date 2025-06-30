@@ -4,27 +4,42 @@ import type { CreateUserProductDto, UserProduct } from "../../models/UserProduct
 import { getProducts } from "../../services/productService";
 import { toast } from "react-toastify";
 import { createUserProduct, deleteUserProduct, getUserProducts, updateUserProduct } from "../../services/userProductService";
+import UserProductTable from "./components/UserProductTable";
+import UserProductForm from "./components/UserProductForm";
 
 const MyProductsPage: React.FC = () => {
-    const [products, setProducts] = useState<Product[]>([]);
-    const [myProducts, setMyProducts] = useState<UserProduct[]>([]);
 
-    const emptyUserProd : UserProduct = {
+    //#region Declarations
+    const [products, setProducts] = useState<Product[]>([]); // Productos disponibles para seleccionar
+    const [myProducts, setMyProducts] = useState<UserProduct[]>([]); // Productos del usuario
+
+    const emptyUserProd: UserProduct = {
         id: 0,
         userId: "",
         productId: 0,
         status: "pendiente",
         purchasePrice: 0,
-        createdAt: new Date,
-    }
-    const [form, setForm] = useState<UserProduct>(emptyUserProd);
+        createdAt: new Date(),
+    };
 
+    const [form, setForm] = useState<UserProduct>(emptyUserProd); // Estado del formulario
+    const [isEditing, setIsEditing] = useState(false); // Bandera para modo edición
+    //#endregion
+
+    // Carga inicial
+    useEffect(() => {
+        loadProducts();
+        loadUserProducts();
+    }, []);
+
+
+    //#region Logica
     const loadProducts = async () => {
         try {
             const res = await getProducts();
             setProducts(res.data);
         } catch {
-            toast.error("Error cargando productos disponibles");
+            toast.error("Error cargando productos disponibles.");
         }
     };
 
@@ -33,45 +48,72 @@ const MyProductsPage: React.FC = () => {
             const res = await getUserProducts();
             setMyProducts(res.data);
         } catch {
-            toast.error("Error cargando productos del usuario");
+            toast.error("Error cargando tus productos.");
         }
+    };
+    //#endregion
+
+    //#region Diseño
+    const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setForm(prevForm => ({
+            ...prevForm,
+            [name]: name === 'productId' || name === 'purchasePrice' ? Number(value) : value
+        }));
     };
 
     const handleSubmit = async () => {
-        if (form.productId === 0 || form.purchasePrice <= 0) {
-            toast.error("Selecciona un producto y un precio válido");
+        // Validaciones previas
+        if (form.productId === 0) {
+            toast.error("Por favor, selecciona un producto.");
+            return;
+        }
+        if (form.purchasePrice <= 0) {
+            toast.error("Por favor, ingresa un precio de compra válido.");
             return;
         }
 
         try {
-            if (form.id && form.id !== 0) {
-                // Editar
+            if (isEditing) {
                 await updateUserProduct(form);
-                toast.success("Producto actualizado");
+                toast.success("Producto actualizado correctamente.");
             } else {
-                // Crear
                 const userProd: CreateUserProductDto = {
                     productId: form.productId,
                     purchasePrice: form.purchasePrice,
                     status: form.status
-                }
-                console.log(userProd)
+                };
                 const response = await createUserProduct(userProd);
-                console.log(response)
 
-                if(response.status !== 200) {
+                if (response.status !== 200 && response.status !== 201) {
                     toast.error("Ocurrió un error al agregar el producto.");
                     return;
                 }
-                toast.success("Producto agregado");
+                toast.success("Producto agregado correctamente.");
             }
-        } catch {
-            toast.error("Error al agregar el producto");
+        } catch (error) {
+            console.error("Error al procesar el producto:", error);
+            toast.error("Error al procesar el producto. Intenta de nuevo.");
+        } finally {
+            loadUserProducts(); // Siempre recargar para ver los cambios
+            setForm(emptyUserProd); // Limpiar formulario
+            setIsEditing(false); // Salir de modo edición
         }
-        finally {
-            loadUserProducts();
-            setForm(emptyUserProd);
-        }
+    };
+
+    const handleEdit = (userProduct: UserProduct) => {
+        setForm({
+            ...userProduct,
+            productId: userProduct.productId,
+            status: userProduct.status,
+            purchasePrice: userProduct.purchasePrice
+        });
+        setIsEditing(true); // Entrar en modo edición
+    };
+
+    const handleCancelEdit = () => {
+        setForm(emptyUserProd);
+        setIsEditing(false);
     };
 
     const handleDelete = async (id: number) => {
@@ -79,132 +121,39 @@ const MyProductsPage: React.FC = () => {
 
         try {
             await deleteUserProduct(id);
-            toast.success("Producto eliminado");
+            toast.success("Producto eliminado correctamente.");
             loadUserProducts();
         } catch {
-            toast.error("Error al eliminar producto");
+            toast.error("Error al eliminar producto.");
         }
     };
-
-    useEffect(() => {
-        loadProducts();
-        loadUserProducts();
-    }, []);
-
+    //#endregion
+    
     return (
         <div className="container mt-4">
-            <h2>Mis Productos</h2>
+            <h2 className="mb-4 text-center">Mis Productos Comprados</h2>
 
-            <div className="row">
-                <div className="col-md-6">
-                    <h5>Agregar Producto</h5>
-
-                    <div className="mb-3">
-                        <label>Producto:</label>
-                        <select
-                            className="form-select"
-                            value={form.productId}
-                            onChange={(e) =>
-                                setForm({ ...form, productId: Number(e.target.value) })
-                            }
-                        >
-                            <option value={0}>-- Selecciona un producto --</option>
-                            {products.map((p) => (
-                                <option
-                                    key={p.id}
-                                    value={p.id}
-                                >
-                                    {p.name}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-
-                    <div className="mb-3">
-                        <label>Precio de compra:</label>
-                        <input
-                            type="number"
-                            className="form-control"
-                            value={form.purchasePrice}
-                            onChange={(e) =>
-                                setForm({ ...form, purchasePrice: Number(e.target.value) })
-                            }
-                        />
-                    </div>
-
-                    <div className="mb-3">
-                        <label>Estado:</label>
-                        <select
-                            className="form-select"
-                            value={form.status}
-                            onChange={(e) =>
-                                setForm({
-                                    ...form,
-                                    status: e.target.value as UserProduct["status"],
-                                })
-                            }
-                        >
-                            <option value="pendiente">Pendiente</option>
-                            <option value="comprado">Comprado</option>
-                            <option value="utilizado">Utilizado</option>
-                        </select>
-                    </div>
-
-                    <button className="btn btn-primary" onClick={handleSubmit}>
-                        Agregar
-                    </button>
+            <div className="row g-4">
+                {/* Componente del formulario */}
+                <div className="col-md-5">
+                    <UserProductForm
+                        form={form}
+                        products={products}
+                        isEditing={isEditing}
+                        onFormChange={handleFormChange}
+                        onSubmit={handleSubmit}
+                        onCancelEdit={handleCancelEdit}
+                    />
                 </div>
 
-                <div className="col-md-6">
-                    <h5>Listado</h5>
-                    <table className="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Producto</th>
-                                <th>Precio Compra</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {myProducts.length === 0 && (
-                                <tr>
-                                    <td colSpan={3}>Sin productos</td>
-                                </tr>
-                            )}
-                            {myProducts.map((up) => (
-                                <tr key={up.id}>
-                                    
-                                    {/* Information */}
-                                    <td>{up.product?.name || `#${up.productId}`}</td>
-                                    <td>${up.purchasePrice}</td>
-                                    <td>{up.status}</td>
-
-                                    {/* Actions */}
-                                    <td>
-                                        <button
-                                            className="btn btn-sm btn-primary me-2"
-                                            onClick={() =>
-                                                setForm({
-                                                    ...emptyUserProd,
-                                                    ...up,
-                                                    productId: up.productId ?? 0,
-                                                    status: up.status ?? "pendiente",
-                                                })
-                                            }
-                                        >
-                                            Editar
-                                        </button>
-                                        <button
-                                            className="btn btn-sm btn-danger"
-                                            onClick={() => handleDelete(up.id)}
-                                        >
-                                            Eliminar
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                {/* Componente de la tabla */}
+                <div className="col-md-7">
+                    <UserProductTable
+                        myProducts={myProducts}
+                        products={products} // Se pasa para que la tabla pueda mostrar los nombres de los productos
+                        onEdit={handleEdit}
+                        onDelete={handleDelete}
+                    />
                 </div>
             </div>
         </div>

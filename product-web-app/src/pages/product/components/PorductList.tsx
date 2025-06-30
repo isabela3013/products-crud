@@ -1,3 +1,4 @@
+import { formatPrice } from "../../../helpers/formatPrice";
 import type { Product } from "../../../models/Product";
 
 interface ProductListProps {
@@ -7,25 +8,16 @@ interface ProductListProps {
 }
 
 const ProductList: React.FC<ProductListProps> = ({ products, onEdit, onDelete }) => {
-    const formatPrice = (price: number) => {
-        return new Intl.NumberFormat('es-CO', { 
-            style: 'currency', 
-            currency: 'COP',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-        }).format(price);
-    };
-
     return (
         <div className="table-responsive"> 
-            <table className="table table-striped table-hover table-bordered caption-top"> {/* Añadidas clases */}
-                <caption>Lista de Productos</caption> {/* Un título para la tabla */}
+            <table className="table table-striped table-hover table-bordered caption-top">
+                {/* <caption>Lista de Productos</caption> */}
                 <thead>
-                    <tr className="table-dark"> {/* Encabezado oscuro */}
+                    <tr className="table-dark">
                         <th>Nombre</th>
                         <th>Descripción</th>
-                        <th className="text-end">Precio</th> {/* Alineado a la derecha */}
-                        <th className="text-center">Acciones</th> {/* Centrado */}
+                        <th className="text-end">Precio</th>
+                        <th className="text-center">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,8 +25,8 @@ const ProductList: React.FC<ProductListProps> = ({ products, onEdit, onDelete })
                         <tr key={p.id}>
                             <td>{p.name}</td>
                             <td>{p.description}</td>
-                            <td className="text-end">{formatPrice(p.price)}</td> {/* Aplicado el formato y alineado */}
-                            <td className="text-center"> {/* Centrado */}
+                            <td className="text-end">{formatPrice(p.price)}</td>
+                            <td className="text-center">
                                 <button 
                                     className="btn btn-sm btn-primary me-2"
                                     onClick={() => onEdit(p)}

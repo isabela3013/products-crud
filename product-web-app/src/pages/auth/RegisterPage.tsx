@@ -109,26 +109,72 @@ const Register = () => {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit} className="w-100 p-4 border rounded shadow-sm bg-white">
-                <h2 className="mb-3">Registro</h2>
+        <div className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+            <form onSubmit={handleSubmit} className="p-4 border rounded shadow-sm bg-white" style={{ maxWidth: '400px', width: '100%' }}>
+                <h2 className="mb-4 text-center">Registro</h2>
+
                 <div className="mb-3">
-                    <label className="form-label">Nombre</label>
-                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-control" />
+                    <label htmlFor="firstName" className="form-label">Nombre</label>
+                    <input
+                        type="text"
+                        name="firstName"
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className={`form-control`}
+                        placeholder="Tu nombre"
+                        required
+                    />
                 </div>
+
                 <div className="mb-3">
-                    <label className="form-label">Apellido</label>
-                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="form-control" />
+                    <label htmlFor="lastName" className="form-label">Apellido</label>
+                    <input
+                        type="text"
+                        name="lastName"
+                        id="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className={`form-control`}
+                        placeholder="Tu apellido"
+                        required
+                    />
                 </div>
+
                 <div className="mb-3">
-                    <label className="form-label">Correo</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" />
+                    <label htmlFor="email" className="form-label">Correo</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`form-control`}
+                        placeholder="ejemplo@dominio.com"
+                        required
+                    />
                 </div>
+
                 <div className="mb-3">
-                    <label className="form-label">Contraseña</label>
-                    <input type="password" name="password" value={formData.password} onChange={handleChange} className="form-control" />
+                    <label htmlFor="password" className="form-label">Contraseña</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        className={`form-control`}
+                        placeholder="Mínimo 6 caracteres"
+                        required
+                    />
                 </div>
-                <button type="submit" className="btn btn-primary">Registrarse</button>
+
+                <button type="submit" className="btn btn-primary w-100 mb-3">
+                    Registrarse
+                </button>
+                <p className="text-center text-muted">
+                    ¿Ya tienes una cuenta? <a href="/login" className="text-decoration-none">Inicia sesión aquí</a>
+                </p>
             </form>
         </div>
     )
