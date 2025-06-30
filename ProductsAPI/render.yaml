@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: products-api
+    env: docker
+    repo: https://github.com/tu-usuario/products-crud
+    rootDir: ProductsAPI
+    dockerfilePath: ProductsAPI/Dockerfile
+    plan: free
+    healthCheckPath: /api/health
